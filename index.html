@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rubinder's Recipes</title>
+  </head>
+  <style>
+
+body{
+      background-color: black;
+    }
+
+h2{
+Font-size: 40px;
+font-weight:lighter;
+line-height: 45px;
+text-decoration: solid;
+text-align: center;
+
+      }
+
+h1{
+          font-size:45px;
+          color: #2a2a2a;
+          text-align: center;
+      }
+
+p{
+  text-align: justify;
+}
+footer{
+     font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+        color: #FEE289;
+}
+
+button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #2a2a2a;
+        background: #2a2a2a;
+        color: #FEE289;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+  button:hover {
+        background: #FEE289;
+        color: #2a2a2a;
+        border: 1px solid #2a2a2a;
+      }
+  .background{
+          background-image: linear-gradient(180deg, #FEE289, #FDEFBC);
+          font-family: sans-serif;
+          align-content: center;
+         width: 60%;
+        padding: 30px;
+          margin: 30px auto;
+          Border: 8px solid black; 
+          border-radius: 5px;
+          box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+      }
+
+.logo{
+     display: block;
+        margin: 0 auto;
+        width: 200px;
+
+}
+.potatoes{
+       width: 100%;
+  height: auto;
+}
+
+  .container {
+    margin: 0 auto;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #858585;
+    max-width: 100%;
+}
+.prepInfo{
+  font-size: medium;
+  color:#3b3a3a;
+  text-align: center;
+}
+
+span.ingredient {
+    color: #4d4b4b;
+}
+
+.pInfo{
+  text-align: justify;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.bio{
+  line-height: 20px;
+}
+
+  </style>
+  <body>
+    <div class="background">
+    <img class="logo"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/019/299/original/Screenshot_2021-10-19_at_15.59.57.png?1634656176="
+      width="200"
+    />
+    <h2>
+      We take pride in creating memorable dining experiences straight from your
+      home.
+    </h2>
+     <div class="container">
+    <h1>Recipe of the week! 🗓️  </h1>
+       <div class="prepInfo">
+🔪<Strong>Preperation:</Strong> 10 mins <br />
+👩🏽‍🍳<Strong>Cooking Time:</Strong> 20 mins <br />
+😎<Strong>Difficulty: </Strong>Easy <br />
+🍽️Serves <strong>2</strong> <br />
+       </div class="prepInfo">
+       <br />
+    <img class="potatoes"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/019/306/original/Screenshot_2021-10-19_at_18.37.03.png?1634665062"
+   />
+        <div class="pInfo">The humble potato was domesticated in the South American Andes some 8,000 years ago and was only brought to Europe in the mid-1500s, from where it spread west and northwards, back to the Americas, and beyond.
+    <a href="https://www.bbc.com/travel/article/20200302-the-true-origins-of-the-humble-potato" target="_blank"> Find out more </a>
+      </a>
+  </div>
+      <hr />
+    <h2>Roasted Garlic Potatoes </h2>
+    <p>
+      These crispy, golden oven-roasted potatoes are lightly seasoned with
+      <span class="ingredient">garlic</span> and  <span class="ingredient">paprika</span>, they are a perfect side dish with any meal. 😋<br />
+      <div>
+     <em class="bio">I make these potatoes at least once a week, and while it's not a
+complicated recipe, it's one I really wanted to share with you all. You need very few ingredients to make these and the majority of the time will have these lying around in your kitchen cupboards. So, why not try to make these this week?
+      </em> 
+      </div>
+    </p>
+    <button>🥔🍠🧄🧂🌿 <br />Get the Recipe</button>
+    </div>
+    </div>
+   <footer> Created by Rubinder Gill</footer>
+    <script>
+alert("👋🏿👋🏻👋🏾👋👋🏼👋🏽 Welcome to Rubinder's Recipes!");
+
+            function getRecipe() {
+        let name = prompt("What is your name?");
+        let potatoes = prompt("Type Yes or No! Do you have potatoes?");
+         potatoes= potatoes.toLocaleLowerCase();
+        //incase anyone puts spaces infront or after
+        potatoes = potatoes.trim();
+        let heading = document.querySelector("h2");
+        if (potatoes = "Yes") {
+          heading.innerHTML = "👩‍🍳👩🏽‍🍳👨🏻‍🍳👨🏿‍🍳🧑🏾‍🍳👨🏼‍🍳<br /> " + name + " let's get cooking! ";
+        } else {
+          heading.innerHTML = "🥺<br />Sorry " + name + " you need potatoes for this recipe!";
+        }
+      }
+
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", getRecipe);
+    </script>
+  </body>
+</html>
